@@ -1,0 +1,22 @@
+steps for creating no comment folder : 
+
+Index.jsp
+
+1. Take the user file using simple form data
+2. take the directory name in a hidden input (just for simpler getting of directory name)
+
+Servlet : 
+
+1. DirectoryName -> get it from the request
+2. get the fileParts using request.getParts
+3. set a temp file -> using java.io.tmpdir
+4. set the tempfolder directory to the base output directory 
+5. if the fileDirectory is not present then create a new directory
+6. loop through the files
+7. get file name to sent the output as the file if the file name is null or empty then continue (this is important to keep check of system files or hidden files inside the directory)
+8. Check the fileExtension using a function and send the files.
+9. Do the functions based on the extension
+10. read the files -> do the function
+11. Zip files which are pressent in the outdirectory that is temp directory then download it
+12. set response and send the data
+
